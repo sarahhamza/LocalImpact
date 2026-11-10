@@ -1,0 +1,27 @@
+{
+  "name": "localimpact",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.28.0",
+  "engines": { "node": ">=20.9" },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "depcruise": "depcruise apps packages --config .dependency-cruiser.cjs",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:seed": "pnpm --filter @acme/db db:seed",
+    "db:indexes": "pnpm --filter @acme/db db:indexes",
+    "e2e": "pnpm --filter @acme/web e2e",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "dependency-cruiser": "^18.7.2",
+    "prettier": "^3.6.2",
+    "turbo": "^2.11.10",
+    "typescript": "~5.9.3"
+  }
+}
