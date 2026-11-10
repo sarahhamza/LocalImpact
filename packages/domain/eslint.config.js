@@ -9,7 +9,7 @@ export default [
     rules: {
       "no-restricted-imports": [
         "error",
-        { patterns: [{ group: ["*", "!./*", "!../*"], message: "Le domaine n'a AUCUNE dépendance : imports relatifs uniquement." }] },
+        { patterns: [{ regex: "^(?!\\.{1,2}/)", message: "Le domaine n'a AUCUNE dépendance : imports relatifs uniquement." }] },
       ],
     },
   },
