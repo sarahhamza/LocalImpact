@@ -1,3 +1,13 @@
-export default function Home() {
-  return <main className="p-8 text-brand-700">LocalImpact — squelette prêt ✅</main>;
+
+import { redirect } from "next/navigation";
+import { getSession } from "../lib/session";
+
+export default async function HomePage() {
+  const session = await getSession();
+
+  if (session) {
+    redirect("/welcome");
+  }
+
+  redirect("/login");
 }
