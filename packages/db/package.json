@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "db:seed": "tsx --env-file=../../.env src/seed.ts",
-    "db:indexes": "tsx --env-file=../../.env src/indexes.ts"
+    "db:indexes": "tsx --env-file=../../.env src/run-indexes.ts"
   },
   "dependencies": { "mongoose": "^8.19.0" },
   "devDependencies": {
